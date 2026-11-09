@@ -1,0 +1,56 @@
+body {
+    background-color: #000000;
+}
+img {
+    position: initial;
+    border-radius: 4px;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 1. Transición suave para cualquier cambio (duración y tipo de aceleración) */
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    /* 2. En lugar de cambiar el width, usamos scale para hacer un zoom limpio del 5% más */
+    transform: scale(1.05);
+}
+h1 {
+    color: #4cc2ff;
+    font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+    text-align: center;
+    font-style: normal;
+}
+
+div {
+    text-align: center;
+}
+.text1 {
+    color: #FDFBF7;
+    max-width: 670px;
+    font-style: normal;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 100;
+    font-size: 20px;
+    font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+}
+button {
+  border: 1px solid #4cc2ff;
+  border-radius: 4px;
+  background: #0b0b0b;
+  color: #4cc2ff;
+  font-family: "Consolas", "Courier New", monospace;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  padding: 6px 20px;
+  display: block;
+}
+button:hover{
+    transform: scale(1.05);
+}

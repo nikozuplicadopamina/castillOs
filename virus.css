@@ -1,0 +1,50 @@
+#virus-window {
+  width: 320px;
+  height: auto;
+  z-index: 999999 !important;
+}
+
+.virus-app {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 30px 18px 26px;
+  background: #000;
+  overflow: hidden;
+}
+
+.virus-title {
+  margin: 0;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ff1a1a;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.85);
+  animation: virus-blink 1s steps(1, end) infinite;
+}
+
+.virus-countdown {
+  margin: 0;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #ff4d4d;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes virus-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.15;
+  }
+}

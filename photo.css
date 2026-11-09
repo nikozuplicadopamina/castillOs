@@ -1,0 +1,30 @@
+.photo-window {
+  width: auto;
+  height: auto;
+  max-width: min(400px, calc(100vw - 24px));
+  max-height: min(300px, calc(100vh - 96px));
+}
+
+body.music-final-mode .photo-window {
+  z-index: 50000 !important;
+}
+
+.photo-app {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  background: #1b1b1b;
+  overflow: hidden;
+}
+
+.photo-app img {
+  max-width: 380px;
+  max-height: 280px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}

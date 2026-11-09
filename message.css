@@ -1,0 +1,33 @@
+#message-window, .message-window {
+  width: auto;
+  height: auto;
+  max-width: min(420px, calc(100vw - 24px));
+  max-height: min(220px, calc(100vh - 96px));
+}
+
+.message-app {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  background: #1b1b1b;
+  overflow: hidden;
+}
+
+body.music-final-mode .message-window {
+  z-index: 99999 !important;
+}
+
+body.music-final-mode .final-message {
+  z-index: 999999 !important;
+}
+
+.message-text {
+  margin: 0;
+  color: #eaeaea;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  white-space: pre-wrap;
+}

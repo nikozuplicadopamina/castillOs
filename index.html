@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escritorio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="blackjack.css">
+  <link rel="stylesheet" href="snake.css">
+  <link rel="stylesheet" href="camera.css">
+  <link rel="stylesheet" href="hangman.css">
+  <link rel="stylesheet" href="music.css">
+  <link rel="stylesheet" href="letter.css">
+  <link rel="stylesheet" href="photo.css">
+  <link rel="stylesheet" href="message.css">
+  <link rel="stylesheet" href="virus.css">
+</head>
+<body>
+  <img class="wallpaper" src="1275722-opt.jpg" alt="" draggable="false" decoding="async">
+
+  <div class="desktop">
+    <button class="desktop-icon" data-app="terminal" title="Doble clic para abrir">
+      <span class="icon">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="3" y="5" width="42" height="38" rx="6" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.5"/>
+          <path d="M12 17l6 5-6 5" fill="none" stroke="#4cc2ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 28h11" fill="none" stroke="#4cc2ff" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="label">Terminal</span>
+    </button>
+
+    <button class="desktop-icon" data-app="notepad" title="Doble clic para abrir">
+      <span class="icon">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="8" y="5" width="32" height="38" rx="4" fill="#f5f5f5"/>
+          <path d="M8 9a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v5H8z" fill="#4cc2ff"/>
+          <path d="M14 21h20M14 27h20M14 33h13" stroke="#8a8a8a" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="label">Bloc de notas</span>
+    </button>
+  </div>
+
+  <section class="window" id="terminal-window" aria-label="Terminal">
+    <header class="window-titlebar">
+      <span class="window-title">Terminal</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="terminal-body">
+      <div class="terminal-output" aria-live="polite"></div>
+      <form class="terminal-input-row">
+        <span class="terminal-prompt">C:\Users\usuario&gt;</span>
+        <input class="terminal-input" type="text" autocomplete="off" spellcheck="false" aria-label="Comando">
+      </form>
+    </div>
+  </section>
+
+  <section class="window" id="notepad-window" aria-label="Bloc de notas">
+    <header class="window-titlebar">
+      <span class="window-title">Bloc de notas — notes.txt</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <textarea class="notepad-text" spellcheck="false" aria-label="Contenido de notes.txt"></textarea>
+    <footer class="notepad-status">
+      <span>Guardado automáticamente</span>
+      <span class="notepad-count"></span>
+    </footer>
+  </section>
+
+  <section class="window" id="blackjack-window" aria-label="Blackjack de fiesta">
+    <header class="window-titlebar">
+      <span class="window-title">Blackjack de fiesta</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="blackjack-app">
+      <div class="bj-window">
+        <div class="bj-banner">
+          <span>BLACKJACK DE FIESTA</span>
+          <span class="bj-banner-mark">21</span>
+        </div>
+
+        <div class="bj-table">
+          <section class="bj-side">
+            <div class="bj-side-head">
+              <span>BANCA</span>
+              <span class="bj-score" id="bj-dealer-score">—</span>
+            </div>
+            <div class="bj-hand" id="bj-dealer-hand" aria-label="Cartas de la banca"></div>
+          </section>
+
+          <div class="bj-message" id="bj-message" role="status" aria-live="polite">
+            Pulsa REPARTIR para empezar.
+          </div>
+
+          <section class="bj-side">
+            <div class="bj-side-head">
+              <span>JUGADOR</span>
+              <span class="bj-score" id="bj-player-score">—</span>
+            </div>
+            <div class="bj-hand" id="bj-player-hand" aria-label="Tus cartas"></div>
+          </section>
+        </div>
+
+        <div class="bj-statusbar">
+          <span id="bj-chips">Caramelos: 100</span>
+          <span id="bj-bet">Apuesta: 10</span>
+        </div>
+
+        <div class="bj-controls">
+          <div class="bj-bet-group" aria-label="Apuesta">
+            <button class="bj-btn" type="button" data-bet="5">5</button>
+            <button class="bj-btn" type="button" data-bet="10">10</button>
+            <button class="bj-btn" type="button" data-bet="25">25</button>
+          </div>
+          <button class="bj-btn bj-primary" type="button" id="bj-deal">REPARTIR</button>
+          <button class="bj-btn" type="button" id="bj-hit" disabled>PEDIR</button>
+          <button class="bj-btn" type="button" id="bj-stand" disabled>PLANTARSE</button>
+          <button class="bj-btn" type="button" id="bj-double" disabled>DOBLAR</button>
+        </div>
+
+        <div class="bj-footer">
+          <div class="bj-footer-actions">
+            <button class="bj-btn bj-small" type="button" id="bj-shop-toggle">TIENDA</button>
+            <button class="bj-btn bj-small" type="button" id="bj-reset">REINICIAR CARAMELOS</button>
+          </div>
+          <span>La banca se planta con 17. Blackjack paga 3:2.</span>
+        </div>
+
+        <div class="bj-shop" id="bj-shop" aria-label="Tienda del Blackjack">
+          <div class="bj-shop-head">
+            <span>TIENDA</span>
+            <button class="bj-btn bj-small" type="button" id="bj-shop-close">CERRAR</button>
+          </div>
+          <div class="bj-shop-items">
+            <article class="bj-shop-item">
+              <h3>Poción de suerte</h3>
+              <p>La próxima mano ganadora paga el doble.</p>
+              <span class="bj-shop-price">25 caramelos</span>
+              <button class="bj-btn" type="button" id="bj-buy-luck">COMPRAR</button>
+            </article>
+            <article class="bj-shop-item">
+              <h3>Escudo</h3>
+              <p>Te devuelve la apuesta de la próxima mano perdida.</p>
+              <span class="bj-shop-price">35 caramelos</span>
+              <button class="bj-btn" type="button" id="bj-buy-shield">COMPRAR</button>
+            </article>
+            <article class="bj-shop-item">
+              <h3>NUEVO REGALO!</h3>
+              <p>Otro link, otro regalo</p>
+              <span class="bj-shop-price">200 caramelos</span>
+              <button class="bj-btn" type="button" id="bj-buy-ticket">COMPRAR</button>
+            </article>
+          </div>
+          <div class="bj-shop-status" id="bj-shop-status">Sin efectos activos.</div>
+        </div>
+      </div>
+      <div class="bj-confetti" id="bj-confetti" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="window" id="blackjack-reward-window" aria-label="Premio del Blackjack">
+    <header class="window-titlebar">
+      <span class="window-title">Premio del Blackjack</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="bj-reward">
+      <h2>¡Link canjeado!</h2>
+      <p>otro pequeño regalo:</p>
+      <a class="bj-reward-btn" id="bj-reward-link" href="page.html" target="_blank" rel="noopener noreferrer">Abrir premio</a>
+    </div>
+  </section>
+
+  <section class="window" id="snake-window" aria-label="Snake ASCII">
+    <header class="window-titlebar">
+      <span class="window-title">Snake</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="snake-app">
+      <div class="snake-status" id="snake-status">Progreso: 0/26  |  Recoge: j</div>
+      <pre class="snake-board" id="snake-board" aria-label="Tablero Snake"></pre>
+      <div class="snake-controls">
+        <button class="snake-btn" type="button" id="snake-start">INICIAR</button>
+        <button class="snake-btn" type="button" id="snake-pause">PAUSAR</button>
+        <button class="snake-btn" type="button" id="snake-restart">REINICIAR</button>
+      </div>
+      <div class="snake-collected" id="snake-collected" aria-label="Letras recogidas"></div>
+      <p class="snake-help">Flechas para mover. Recoge cada letra en orden.</p>
+    </div>
+  </section>
+
+  <section class="window" id="snake-result-window" aria-label="Enlace desbloqueado">
+    <header class="window-titlebar">
+      <span class="window-title">Enlace desbloqueado</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="snake-result">
+      <h2>¡ENLACE DESCUBIERTO!</h2>
+      <p>Este es empezando el primer regalo aunq no lo es tanto de mi parte, me hablé con Isabella para q me pudiera ayudar con un video solo para usted:</p>
+      <a class="snake-result-btn" id="snake-result-link" href="#" target="_blank" rel="noopener noreferrer">Abrir en YouTube</a>
+    </div>
+  </section>
+
+  <section class="window" id="camera-window" aria-label="Cámara">
+    <header class="window-titlebar">
+      <span class="window-title">Cámara</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="camera-app">
+      <div class="camera-stage">
+        <canvas class="camera-feed" id="camera-feed" width="960" height="540"></canvas>
+        <video class="camera-video" id="camera-video" autoplay playsinline muted></video>
+        <canvas class="camera-draw" id="camera-draw" width="960" height="540" aria-label="Área de dibujo"></canvas>
+        <div class="camera-rec">REC</div>
+        <div class="camera-label">CAM 01 · SEÑAL SIMULADA</div>
+      </div>
+      <div class="camera-toolbar">
+        <div class="camera-colors" aria-label="Color del trazo">
+          <button class="camera-color is-active" type="button" data-color="#ff4d4d" style="--swatch:#ff4d4d" aria-label="Rojo"></button>
+          <button class="camera-color" type="button" data-color="#ffd86b" style="--swatch:#ffd86b" aria-label="Amarillo"></button>
+          <button class="camera-color" type="button" data-color="#56e07e" style="--swatch:#56e07e" aria-label="Verde"></button>
+          <button class="camera-color" type="button" data-color="#4cc2ff" style="--swatch:#4cc2ff" aria-label="Azul"></button>
+          <button class="camera-color" type="button" data-color="#ffffff" style="--swatch:#ffffff" aria-label="Blanco"></button>
+        </div>
+        <label class="camera-size">Grosor
+          <input type="range" id="camera-size" min="1" max="16" value="4">
+        </label>
+        <button class="camera-btn" type="button" id="camera-clear">LIMPIAR</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="window" id="camera-message-window" aria-label="Mensaje de la cámara">
+    <header class="window-titlebar">
+      <span class="window-title">Mensaje de la cámara</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="camera-message">
+      <h2>Mensaje</h2>
+      <p id="camera-message-text"></p>
+    </div>
+  </section>
+
+  <section class="window" id="hangman-window" aria-label="Ahorcado">
+    <header class="window-titlebar">
+      <span class="window-title">Ahorcado</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="hangman-app">
+      <div class="hangman-status" id="hangman-status">Adivina la palabra</div>
+      <div class="hangman-progress" id="hangman-progress">Palabra 1 de 5</div>
+      <div class="hangman-drawing">
+        <svg viewBox="0 0 120 160" class="hangman-svg" aria-label="Ahorcado">
+          <line x1="10" y1="150" x2="110" y2="150" stroke="#c9a26b" stroke-width="4"/>
+          <line x1="30" y1="150" x2="30" y2="20" stroke="#c9a26b" stroke-width="4"/>
+          <line x1="30" y1="20" x2="80" y2="20" stroke="#c9a26b" stroke-width="4"/>
+          <line x1="80" y1="20" x2="80" y2="40" stroke="#c9a26b" stroke-width="4"/>
+          <g id="hangman-parts" stroke="#eaeaea" stroke-width="3" fill="none" stroke-linecap="round">
+            <circle cx="80" cy="50" r="10" class="part" data-step="1"/>
+            <line x1="80" y1="60" x2="80" y2="95" class="part" data-step="2"/>
+            <line x1="80" y1="70" x2="65" y2="85" class="part" data-step="3"/>
+            <line x1="80" y1="70" x2="95" y2="85" class="part" data-step="4"/>
+            <line x1="80" y1="95" x2="65" y2="115" class="part" data-step="5"/>
+            <line x1="80" y1="95" x2="95" y2="115" class="part" data-step="6"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hangman-word" id="hangman-word"></div>
+      <div class="hangman-keyboard" id="hangman-keyboard"></div>
+      <div class="hangman-message" id="hangman-message"></div>
+      <button class="hangman-btn" type="button" id="hangman-restart">REINICIAR</button>
+    </div>
+  </section>
+
+  <section class="window" id="hangman-result-window" aria-label="Mensaje del Ahorcado">
+    <header class="window-titlebar">
+      <span class="window-title">Mensaje del Ahorcado</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="hangman-result">
+      <h2>¡Ganaste!</h2>
+      <p id="hangman-result-text"></p>
+    </div>
+  </section>
+
+  <section class="window" id="music-window" aria-label="Reproductor MP3">
+    <header class="window-titlebar">
+      <span class="window-title">Reproductor MP3</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="music-app">
+      <div class="music-bars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="music-cover">
+        <img src="ab67616d000082c1aba177927e81fad421788e39.jpeg" alt="Portada del álbum">
+      </div>
+      <div class="music-meta">
+        <div class="music-title" id="music-title">Pac0o</div>
+        <div class="music-artist" id="music-artist">inu(D)</div>
+        <div class="music-album" id="music-album">Álbum</div>
+        <div class="music-progress" aria-label="Barra de reproducción">
+          <div class="music-progress-fill" id="music-progress-fill"></div>
+        </div>
+        <div class="music-controls">
+          <button class="music-btn" type="button" id="music-play">PAUSA</button>
+        </div>
+        <div class="music-time" id="music-time">0:02 / 0:00</div>
+      </div>
+      <audio id="music-audio" src="inu(D)%20-%20Pac0o.mp3" preload="metadata"></audio>
+    </div>
+  </section>
+
+  <section class="window" id="letter-window" aria-label="Carta">
+    <header class="window-titlebar">
+      <span class="window-title">Carta</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="letter-app">
+      <img src="carta.png" alt="Carta" class="letter-image">
+    </div>
+  </section>
+
+  <section class="window" id="photo-window" aria-label="Fotos">
+    <header class="window-titlebar">
+      <span class="window-title">Fotos</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="photo-app">
+      <img id="photo-image" src="" alt="Foto">
+    </div>
+  </section>
+
+  <section class="window" id="message-window" aria-label="Mensaje">
+    <header class="window-titlebar">
+      <span class="window-title">Mensaje</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="message-app">
+      <p class="message-text"></p>
+    </div>
+  </section>
+
+  <section class="window" id="virus-window" aria-label="Alerta">
+    <header class="window-titlebar">
+      <span class="window-title">alerta.exe</span>
+      <div class="window-controls">
+        <button class="win-btn win-minimize" aria-label="Minimizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 5h6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-maximize" aria-label="Maximizar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><rect x="2" y="2" width="6" height="6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+        <button class="win-btn win-close" aria-label="Cerrar">
+          <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" stroke-width="1.2"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="virus-app">
+      <p class="virus-title">VIRUS ACTIVADO!</p>
+      <p class="virus-countdown">00:55</p>
+    </div>
+  </section>
+
+  <div class="taskbar">
+    <div class="taskbar-center">
+      <button class="taskbar-btn" data-tip="Inicio" aria-label="Inicio">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <defs>
+            <linearGradient id="winGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5ac8ff"/>
+              <stop offset="1" stop-color="#0078d4"/>
+            </linearGradient>
+          </defs>
+          <rect x="3" y="3" width="8" height="8" rx="1.2" fill="url(#winGrad)"/>
+          <rect x="13" y="3" width="8" height="8" rx="1.2" fill="url(#winGrad)"/>
+          <rect x="3" y="13" width="8" height="8" rx="1.2" fill="url(#winGrad)"/>
+          <rect x="13" y="13" width="8" height="8" rx="1.2" fill="url(#winGrad)"/>
+        </svg>
+      </button>
+
+      <button class="taskbar-btn taskbar-app" data-app="terminal" data-tip="Terminal" aria-label="Terminal">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="3" y="5" width="42" height="38" rx="6" fill="#0c0c0c" stroke="#3a3a3a" stroke-width="1.5"/>
+          <path d="M12 17l6 5-6 5" fill="none" stroke="#4cc2ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 28h11" fill="none" stroke="#4cc2ff" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <button class="taskbar-btn taskbar-app" data-app="notepad" data-tip="Bloc de notas" aria-label="Bloc de notas">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="8" y="5" width="32" height="38" rx="4" fill="#f5f5f5"/>
+          <path d="M8 9a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4v5H8z" fill="#4cc2ff"/>
+          <path d="M14 21h20M14 27h20M14 33h13" stroke="#8a8a8a" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <button class="taskbar-btn taskbar-app" data-app="blackjack" data-tip="Blackjack de fiesta" aria-label="Blackjack de fiesta">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="7" y="7" width="24" height="34" rx="4" fill="#f5f5f5" stroke="#222" stroke-width="1.5" transform="rotate(-8 19 24)"/>
+          <rect x="16" y="7" width="24" height="34" rx="4" fill="#fff" stroke="#222" stroke-width="1.5" transform="rotate(8 28 24)"/>
+          <path d="M28 15l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.2-4.1 5.8-.8z" fill="#e0245e"/>
+          <text x="28" y="31" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#1b1b1b">21</text>
+        </svg>
+      </button>
+
+  <button class="taskbar-btn taskbar-app" data-app="snake" data-tip="Snake ASCII" aria-label="Snake ASCII">
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="6" y="6" width="36" height="36" rx="6" fill="#0b0b0b" stroke="#4cc2ff" stroke-width="1.5"/>
+      <text x="24" y="30" text-anchor="middle" font-family="Consolas, monospace" font-size="16" font-weight="700" fill="#4cc2ff">0oo</text>
+    </svg>
+  </button>
+
+  <button class="taskbar-btn taskbar-app" data-app="camera" data-tip="Cámara" aria-label="Cámara">
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="6" y="12" width="28" height="22" rx="5" fill="#1b1b1b" stroke="#4cc2ff" stroke-width="1.5"/>
+      <circle cx="20" cy="23" r="6.5" fill="#0b0b0b" stroke="#d7d7d7" stroke-width="1.5"/>
+      <circle cx="20" cy="23" r="3" fill="#4cc2ff"/>
+      <path d="M34 17l8-5v22l-8-5z" fill="#1b1b1b" stroke="#4cc2ff" stroke-width="1.5" stroke-linejoin="round"/>
+      <circle cx="12" cy="16" r="1.6" fill="#ff5a5a"/>
+    </svg>
+  </button>
+
+  <button class="taskbar-btn taskbar-app" data-app="hangman" data-tip="Ahorcado" aria-label="Ahorcado">
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="8" y="6" width="4" height="36" fill="#c9a26b"/>
+      <rect x="8" y="6" width="24" height="4" fill="#c9a26b"/>
+      <rect x="30" y="6" width="2" height="8" fill="#c9a26b"/>
+      <circle cx="31" cy="18" r="4" fill="none" stroke="#eaeaea" stroke-width="2"/>
+      <path d="M31 22v10M31 26l-5 4M31 26l5 4M31 32l-4 6M31 32l4 6" fill="none" stroke="#eaeaea" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <button class="taskbar-btn taskbar-app" data-app="music" data-tip="Reproductor MP3" aria-label="Reproductor MP3">
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="18" fill="#1b1b1b" stroke="#4cc2ff" stroke-width="2"/>
+      <circle cx="24" cy="24" r="6" fill="#4cc2ff"/>
+      <path d="M24 10v6M24 32v6M10 24h6M32 24h6" stroke="#d7d7d7" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+    </div>
+
+    <div class="taskbar-right">
+      <button class="tray-btn chevron" aria-label="Mostrar iconos ocultos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 14l6-6 6 6"/>
+        </svg>
+      </button>
+
+      <button class="tray-btn system-tray" aria-label="Red, sonido y batería">
+        <span class="network-icon wifi">
+          <svg class="net-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <path d="M2.5 8.5a15 15 0 0 1 19 0"/>
+            <path d="M5.5 12a10.5 10.5 0 0 1 13 0"/>
+            <path d="M8.5 15.5a6 6 0 0 1 7 0"/>
+            <circle cx="12" cy="19" r="1.2" fill="currentColor" stroke="none"/>
+          </svg>
+          <svg class="net-ethernet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M7 3h10a2 2 0 0 1 2 2v6H5V5a2 2 0 0 1 2-2z"/>
+            <path d="M9 5.5v3M12 5.5v3M15 5.5v3"/>
+            <path d="M8 11v3.5a4 4 0 0 0 4 4 4 4 0 0 0 4-4V11"/>
+          </svg>
+          <svg class="net-offline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <path d="M2.5 8.5a15 15 0 0 1 19 0"/>
+            <path d="M5.5 12a10.5 10.5 0 0 1 13 0"/>
+            <path d="M8.5 15.5a6 6 0 0 1 7 0"/>
+            <circle cx="12" cy="19" r="1.2" fill="currentColor" stroke="none"/>
+            <path d="M3 3l18 18" stroke="#0b0b0b" stroke-width="3"/>
+            <path d="M3 3l18 18"/>
+          </svg>
+        </span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor" stroke="none"/>
+          <path d="M15.5 9a4.5 4.5 0 0 1 0 6"/>
+          <path d="M18 6.5a8 8 0 0 1 0 11"/>
+        </svg>
+        <svg class="battery-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <rect x="2.5" y="8" width="17" height="8" rx="2"/>
+          <rect class="battery-fill" x="4.5" y="10" width="10" height="4" rx="1" fill="currentColor" stroke="none"/>
+          <path class="battery-bolt" d="M11.4 9.2 9 12.6h1.7l-1 2.4 2.9-3.6h-1.8z" fill="#fff" stroke="#0b0b0b" stroke-width="0.5" stroke-linejoin="round"/>
+          <path d="M21.5 10.5v3" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <button class="tray-btn clock" aria-label="Fecha y hora">
+        <span class="time">00:00</span>
+        <span class="date">00/00/0000</span>
+      </button>
+
+      <button class="tray-btn bell" aria-label="Notificaciones">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/>
+          <path d="M10 19a2 2 0 0 0 4 0"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="commands.js"></script>
+  <script src="script.js"></script>
+  <script src="blackjack.js"></script>
+  <script src="snake.js"></script>
+  <script src="camera.js"></script>
+  <script src="hangman.js"></script>
+  <script src="music.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+#snake-window {
+  width: min(430px, calc(100vw - 24px));
+  height: min(580px, calc(100vh - 96px));
+}
+
+.snake-app {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: #0b0b0b;
+  color: #4cc2ff;
+  font-family: "Consolas", "Courier New", monospace;
+  flex: 1;
+  min-height: 0;
+}
+
+.snake-status {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4cc2ff;
+}
+
+.snake-board {
+  margin: 0;
+  padding: 6px;
+  background: #050505;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  font-size: 19px;
+  line-height: 0.6;
+  overflow: hidden;
+  white-space: pre;
+  width: fit-content;
+  margin: 0 auto;
+  color: #6a6a6a;
+}
+
+.snake-dot {
+  color: #5a5a5a;
+}
+
+.snake-food {
+  color: #4cc2ff;
+  font-weight: 700;
+}
+
+.snake-snake {
+  color: #4cc2ff;
+  font-weight: 700;
+}
+
+.snake-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.snake-btn {
+  padding: 6px 14px;
+  border: 1px solid #4cc2ff;
+  border-radius: 4px;
+  background: #0b0b0b;
+  color: #4cc2ff;
+  font-family: "Consolas", "Courier New", monospace;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.snake-btn:hover {
+  background: #4cc2ff;
+  color: #000;
+}
+
+.snake-collected {
+  min-height: 18px;
+  padding: 4px 8px;
+  background: #050505;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #4cc2ff;
+  text-align: center;
+  word-break: break-all;
+}
+
+.snake-help {
+  margin: 0;
+  font-size: 11px;
+  color: #8a8a8a;
+  text-align: center;
+}
+
+.snake-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+  background: #0b0b0b;
+  color: #f3f3f3;
+  flex: 1;
+}
+
+.snake-result h2 {
+  margin: 0;
+  color: #4cc2ff;
+}
+
+.snake-result a {
+  color: #4cc2ff;
+  word-break: break-all;
+}
+
+.snake-result-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 2px solid #4cc2ff;
+  border-radius: 6px;
+  background: #0b0b0b;
+  color: #4cc2ff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.snake-result-btn:hover {
+  background: #4cc2ff;
+  color: #000;
+}
+
+.snake-result-url {
+  font-size: 11px;
+  color: #8a8a8a;
+  word-break: break-all;
+}
