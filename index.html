@@ -14,8 +14,23 @@
   <link rel="stylesheet" href="photo.css">
   <link rel="stylesheet" href="message.css">
   <link rel="stylesheet" href="virus.css">
+  <link rel="stylesheet" href="boot.css">
 </head>
 <body>
+  <div class="boot-screen" id="boot-screen">
+    <div class="boot-logo">castillOs</div>
+    <div class="boot-spinner"></div>
+    <div class="boot-text">Iniciando...</div>
+  </div>
+
+  <div class="lock-screen" id="lock-screen">
+    <div class="lock-time" id="lock-time">00:00</div>
+    <div class="lock-date" id="lock-date">Lunes, 9 de noviembre</div>
+    <div class="lock-pin">
+      <input id="lock-pin-input" type="password" maxlength="4" inputmode="numeric" placeholder="PIN" autocomplete="off">
+      <div class="lock-error" id="lock-error"></div>
+    </div>
+  </div>
   <img class="wallpaper" src="1275722-opt.jpg" alt="" draggable="false" decoding="async">
 
   <div class="desktop">
@@ -644,5 +659,6 @@
   <script src="camera.js"></script>
   <script src="hangman.js"></script>
   <script src="music.js"></script>
+  <script src="boot.js"></script>
 </body>
 </html>

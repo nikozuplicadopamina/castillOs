@@ -1,0 +1,103 @@
+.boot-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1000000;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.boot-logo {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.boot-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: boot-spin 1s linear infinite;
+}
+
+@keyframes boot-spin {
+  to { transform: rotate(360deg); }
+}
+
+.boot-text {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.lock-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: url("1275722-opt.jpg") center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: "Segoe UI", sans-serif;
+  backdrop-filter: none;
+}
+
+.lock-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+.lock-screen.lock-unlocking {
+  animation: lock-unlock 0.6s ease forwards;
+}
+
+@keyframes lock-unlock {
+  0% { opacity: 1; transform: scale(1); filter: blur(0); }
+  100% { opacity: 0; transform: scale(1.05); filter: blur(8px); }
+}
+
+.lock-time {
+  font-size: 72px;
+  font-weight: 300;
+}
+
+.lock-date {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.lock-pin input {
+  font-size: 24px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+  letter-spacing: 8px;
+  width: 160px;
+}
+
+.lock-error {
+  color: #ff6b6b;
+  font-size: 13px;
+  min-height: 16px;
+  margin-top: 8px;
+}
+
+.lock-hidden {
+  display: none !important;
+}
